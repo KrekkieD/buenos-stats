@@ -8,7 +8,10 @@ var $yargs = require('yargs');
 var $https = require('https');
 var $fs = require('fs');
 
-if (!module.parent) {
+// only support cli for now
+cli();
+
+function cli () {
 
     // extract cli params
     var args = $yargs.argv;
