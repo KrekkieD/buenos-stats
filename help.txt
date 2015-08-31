@@ -1,0 +1,18 @@
+buenos-stats help
+
+Usage:
+    buenos-stats [packages] [arguments]
+
+Arguments:
+    --?             : this manual
+    --user=<user>   : specify a user (may be comma separated)
+    --store         : store query (can only store one per install)
+    --unstore       : remove stored query
+
+Examples:
+
+    Get stats for npm and express:
+        buenos-stats npm express
+
+    Get stats for npm and user buenos:
+        buenos-stats npm --user=buenos

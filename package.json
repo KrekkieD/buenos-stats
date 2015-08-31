@@ -1,0 +1,30 @@
+{
+  "name": "buenos-stats",
+  "version": ".1.0",
+  "description": "Npm Package stats overview from your command line",
+  "keywords": ["npm", "stats", "statistics"],
+  "main": "index.js",
+  "bin": {
+      "buenos-stats": "bin/buenos-stats"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://krekkied@github.com/KrekkieD/buenos-stats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KrekkieD/buenos-stats/issues"
+  },
+  "homepage": "https://github.com/KrekkieD/buenos-stats",
+  "readme": "readme.md",
+  "author": "Gregory Cowan",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "cli-table": "^0.3.1",
+    "q": "^1.4.1",
+    "yargs": "^3.21.0"
+  }
+}

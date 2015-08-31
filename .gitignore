@@ -1,0 +1,5 @@
+.idea
+node_modules
+stored-query.json
+npm-debug.log
+
