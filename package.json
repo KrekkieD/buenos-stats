@@ -1,6 +1,6 @@
 {
   "name": "buenos-stats",
-  "version": ".1.0",
+  "version": "0.1.0-alpha",
   "description": "Npm Package stats overview from your command line",
   "keywords": ["npm", "stats", "statistics"],
   "main": "index.js",
