@@ -265,9 +265,9 @@ function getPage (path) {
 function scrapePackagePage (html) {
 
     var stats = {
-        dailyDownloads: 'unknown',
-        weeklyDownloads: 'unknown',
-        monthlyDownloads: 'unknown'
+        dailyDownloads: '0',
+        weeklyDownloads: '0',
+        monthlyDownloads: '0'
     };
 
     // cheerio work here
