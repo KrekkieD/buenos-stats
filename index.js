@@ -126,17 +126,17 @@ function buenosStats (config) {
 
                 // parse stats to array of arrays
                 var statsArray = [
-                    ['Package name', 'daily', 'weekly', 'monthly']
+                    ['Package name', 'daily', 'weekly', 'monthly', 'dependents']
                 ];
                 Object.keys(stats).forEach(function (packageName) {
 
                     var pkg = stats[packageName];
-                    statsArray.push([packageName, pkg.dailyDownloads, pkg.weeklyDownloads, pkg.monthlyDownloads]);
+                    statsArray.push([packageName, pkg.dailyDownloads, pkg.weeklyDownloads, pkg.monthlyDownloads, pkg.dependents]);
 
                 });
 
                 // extract required column lengths
-                var colWidths = [0, 0, 0, 0];
+                var colWidths = [0, 0, 0, 0, 0];
                 statsArray.forEach(function (result) {
 
                     var i = 0;
@@ -152,7 +152,7 @@ function buenosStats (config) {
 
                 var table = new $table({
                     head: statsArray.shift(),
-                    colAligns: ['left', 'right', 'right', 'right'],
+                    colAligns: ['left', 'right', 'right', 'right', 'right'],
                     colWidths: colWidths
                 });
 
@@ -267,7 +267,8 @@ function scrapePackagePage (html) {
     var stats = {
         dailyDownloads: '0',
         weeklyDownloads: '0',
-        monthlyDownloads: '0'
+        monthlyDownloads: '0',
+        dependents: '0'
     };
 
     // cheerio work here
@@ -276,6 +277,7 @@ function scrapePackagePage (html) {
     stats.dailyDownloads = $('.daily-downloads').text() || stats.dailyDownloads;
     stats.weeklyDownloads = $('.weekly-downloads').text() || stats.weeklyDownloads;
     stats.monthlyDownloads = $('.monthly-downloads').text() || stats.monthlyDownloads;
+    stats.dependents = $('.list-of-links.dependents a').length || stats.dependents;
 
     return stats;
 

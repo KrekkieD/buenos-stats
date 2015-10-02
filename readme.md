@@ -1,5 +1,13 @@
 # buenos-stats
 
+A command line utility for your NPM package stats
+
+## Description
+
+Provides you with daily, weekly, and monthly download counts, and the number of dependents on your package.
+
+Specify one or more specific packages, or a user to get all package stats for packages by that user.
+
 ## Installation
 
 Preferably global
